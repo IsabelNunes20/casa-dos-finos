@@ -4,12 +4,14 @@
   "private": true,
   "workspaces": [
     "apps/react",
-    "apps/nextjs"
+    "apps/nextjs",
+    "packages/typescript-config"
   ],
   "dependencies": {
     "motion": "^12.12.2",
     "radix-ui": "^1.4.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sass": "^1.89.0"
   }
 }

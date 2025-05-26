@@ -26,3 +26,15 @@ This is a monorepo for currently two apps, a react one and a nextjs one with the
 
 4. `npm run dev`
 
+
+## What's inside
+
+```
+.
+├── apps
+│   ├── nextjs                    # Next.js app (https://nextjs.org).
+│   └── react                     # React app (https://react.dev).
+└── packages
+    ├── @repo/typescript-config   # `tsconfig.json`s used throughout the monorepo
+
+```
