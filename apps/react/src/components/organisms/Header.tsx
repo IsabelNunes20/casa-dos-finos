@@ -1,6 +1,7 @@
 // TODO: Add component a button to add a new beer
 
 import { Heading } from "@radix-ui/themes";
+import { Button } from "@repo/ui";
 
 function Header() {
   return (

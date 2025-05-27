@@ -5,7 +5,8 @@
   "workspaces": [
     "apps/react",
     "apps/nextjs",
-    "packages/typescript-config"
+    "packages/typescript-config",
+    "packages/ui"
   ],
   "dependencies": {
     "@radix-ui/colors": "^3.0.0",
