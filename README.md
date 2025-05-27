@@ -32,9 +32,10 @@ This is a monorepo for currently two apps, a react one and a nextjs one with the
 ```
 .
 ├── apps
-│   ├── nextjs                    # Next.js app (https://nextjs.org).
-│   └── react                     # React app (https://react.dev).
+│   ├── nextjs                    # Next.js app (https://nextjs.org)
+│   └── react                     # React app (https://react.dev)
 └── packages
     ├── @repo/typescript-config   # `tsconfig.json`s used throughout the monorepo
+    ├── @repo/ui                  # UI's future components to be shared between apps
 
 ```
