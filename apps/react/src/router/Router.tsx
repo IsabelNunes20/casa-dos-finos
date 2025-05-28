@@ -1,15 +1,15 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import Layout from "../components/templates/Layout";
-import AllBeersPage, { loader as allBeersPageLoader } from "./AllBeersPage";
-import BeerPage, { loader as beerPageLoader } from "./BeerPage";
-import AddBeerPage, { action as addBeerPageAction } from "./AddBeerPage";
+import RootLayout from "../components/RootLayout";
+import AllBeersPage, { loader as allBeersPageLoader } from "../routes/AllBeersPage";
+import BeerPage, { loader as beerPageLoader } from "../routes/BeerPage";
+import AddBeerPage, { action as addBeerPageAction } from "../routes/AddBeerPage";
 
 function Router() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: <RootLayout />,
       children: [
         {
           path: "/",

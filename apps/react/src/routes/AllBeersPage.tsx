@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoaderData } from 'react-router-dom';
-import AllBeers from '../components/pages/AllBeers';
 
+import { Collection } from '@repo/ui'
 import { Beer } from '../types/data';
 
 const AllBeersPage: React.FC = () => {
@@ -16,7 +16,7 @@ const AllBeersPage: React.FC = () => {
     });
 
     return (
-        <AllBeers beers={elements} />
+        <Collection list={elements} noObjsctsMsg="No beers found" />
     );
 };
 

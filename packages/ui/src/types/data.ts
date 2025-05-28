@@ -11,3 +11,7 @@ export interface ListProps {
   list: Array<ListObject>;
   noObjsctsMsg: string;
 }
+
+export interface LayoutProps {
+  children: React.ReactNode;
+}

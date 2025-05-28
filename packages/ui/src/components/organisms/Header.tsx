@@ -1,9 +1,10 @@
-// TODO: Add component a button to add a new beer
+import React from 'react';
 
 import { Heading, Flex } from "@radix-ui/themes";
-import { Right } from "@repo/ui";
 
-function Header() {
+import { Right } from "../molecules/Right";
+
+export const Header: React.FC = () => {
   return (
     <header>
         <Flex justify="between" align="center" pb="6">
@@ -13,5 +14,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
