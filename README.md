@@ -37,5 +37,9 @@ This is a monorepo for currently two apps, a react one and a nextjs one with the
 └── packages
     ├── @repo/typescript-config   # `tsconfig.json`s used throughout the monorepo
     ├── @repo/ui                  # UI's future components to be shared between apps
-
+...
 ```
+
+## API
+
+This [remote API](https://6835d96bcd78db2058c36a1b.mockapi.io/beers) was used to get all the beers, get one especificaly and to add more. It was build with [mockapi.io](https://mockapi.io/).

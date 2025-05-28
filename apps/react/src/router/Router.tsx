@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Layout from "../components/templates/Layout";
-import AllBeersPage from "../components/pages/AllBeersPage";
+import AllBeersPage, { loader as allBeersPageLoader } from "./AllBeersPage";
+import BeerPage, { loader as beerPageLoader } from "./BeerPage";
+import AddBeerPage, { action as addBeerPageAction } from "./AddBeerPage";
 
 function Router() {
   const router = createBrowserRouter([
@@ -10,9 +12,15 @@ function Router() {
       element: <Layout />,
       children: [
         {
-            path:"/",
-            element: <AllBeersPage />
-        }
+          path: "/",
+          element: <AllBeersPage />,
+          loader: allBeersPageLoader
+        },
+        {
+          path: "/:id",
+          element: <BeerPage />,
+          loader: beerPageLoader,
+        },
       ],
     },
   ]);
