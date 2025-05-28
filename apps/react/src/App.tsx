@@ -1,13 +1,31 @@
 import React from 'react';
-import { Theme } from "@radix-ui/themes";
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
-import Router from './router/Router';
+import RootLayout from "./components/RootLayout";
+import AllBeersPage, { loader as allBeersPageLoader } from "./routes/AllBeersPage";
+import BeerPage, { loader as beerPageLoader } from "./routes/BeerPage";
+import AddBeerPage, { action as addBeerPageAction } from "./routes/AddBeerPage";
+
 
 export default function App() {
-  return (
-    <Theme accentColor="orange" grayColor="olive">
-      <Router />
-    </Theme>
-    
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          path: "/",
+          element: <AllBeersPage />,
+          loader: allBeersPageLoader
+        },
+        {
+          path: "/:id",
+          element: <BeerPage />,
+          loader: beerPageLoader,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} /> ;
 }

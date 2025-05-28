@@ -15,3 +15,20 @@ export interface ListProps {
 export interface LayoutProps {
   children: React.ReactNode;
 }
+
+export type OptionalAttrs = {
+  brand?: string;
+  ingredients?: string[];
+  rating?: number;
+  notes?: string;
+}
+
+export type Obj = OptionalAttrs & {
+  createdAt: string;
+  name: string;
+  id: string;
+};
+
+export interface DetailsProps {
+  obj: Obj;
+}

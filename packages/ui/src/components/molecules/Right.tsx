@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { PrimaryButton } from "../atoms/PrimaryButton";
 
@@ -10,8 +9,8 @@ interface RightProps {
 
 export const Right: React.FC<RightProps> = ({ label, link }) => {
   return (
-    <Link to={link}>
+    <a href={link}>
       <PrimaryButton label={label} />
-    </Link>
+    </a>
   );
 };

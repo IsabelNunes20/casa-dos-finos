@@ -1,4 +1,4 @@
-export interface Beer {
+export type Beer = {
   createdAt: string;
   name: string;
   brand: string;
