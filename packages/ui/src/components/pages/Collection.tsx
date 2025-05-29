@@ -3,10 +3,22 @@ import React from "react";
 import { List } from "../organisms/List";
 import { ListProps } from "../../types/data";
 
-export const Collection: React.FC<ListProps> = ({ list, noObjsctsMsg }) => {
+import { Layout } from "../templates/Layout";
+import { Popup } from "../templates/Popup";
+
+type CollectionProps = {
+  onAddElement: React.FormEventHandler<HTMLFormElement>;
+} & ListProps;
+
+export const Collection: React.FC<CollectionProps> = ({ list, noObjsctsMsg, onAddElement }) => {
   return (
-    <main>
-      <List list={list} noObjsctsMsg={noObjsctsMsg} />
-    </main>
+    <>
+      <Layout>
+        <main>
+          <List list={list} noObjsctsMsg={noObjsctsMsg} />
+        </main>
+      </Layout>
+      <Popup onAddElement={onAddElement}></Popup>
+    </>
   );
 };

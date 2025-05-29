@@ -2,6 +2,7 @@ import React from "react";
 
 import { DetailsProps, Obj, OptionalAttrs } from "../../types/data";
 import { Sections } from "../organisms/Sections";
+import { Layout } from "../templates/Layout";
 
 export const Details: React.FC<DetailsProps> = ({
   obj
@@ -22,8 +23,8 @@ export const Details: React.FC<DetailsProps> = ({
   });
 
   return (
-    <>
-      <Sections attributes={ attributes } />
-    </>
+    <Layout>
+      <Sections attributes={attributes} />
+    </Layout>
   );
 };
